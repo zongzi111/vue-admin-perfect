@@ -401,3 +401,5 @@ PLUGINS_URL_PATTERNS = []
 # from dvadmin_celery.settings import *            # celery 异步任务
 # ...
 # ********** 一键导入插件配置结束 **********
+
+ALLOWED_HOSTS = ['*']

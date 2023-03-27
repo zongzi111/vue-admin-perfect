@@ -69,3 +69,20 @@ class SpeciesModelViewSet(CustomModelViewSet):
     update_serializer_class = SpeciesModelCreateUpdateSerializer
     filter_fields = ['name']
     search_fields = ['name']
+
+
+class SampleModelViewSet(CustomModelViewSet):
+    """
+    样本管理
+    list:查询
+    create:新增
+    update:修改
+    retrieve:单例
+    destroy:删除
+    """
+    queryset = SampleModel.objects.all()
+    serializer_class = SampleModelSerializer
+    create_serializer_class = SampleModelCreateUpdateSerializer
+    update_serializer_class = SampleModelCreateUpdateSerializer
+    filter_fields = ['no']
+    search_fields = ['no']

@@ -82,3 +82,23 @@ class SpeciesModelCreateUpdateSerializer(CustomModelSerializer):
     class Meta:
         model = SpeciesModel
         fields = '__all__'
+
+
+class SampleModelSerializer(CustomModelSerializer):
+    """
+    样本序列化器
+    """
+
+    class Meta:
+        model = SampleModel
+        fields = "__all__"
+
+
+class SampleModelCreateUpdateSerializer(CustomModelSerializer):
+    """
+    样本创建/更新时的列化器
+    """
+
+    class Meta:
+        model = SampleModel
+        fields = '__all__'
