@@ -47,7 +47,7 @@
     "user_type": 0,
     "role": [],
     "role_key": ["public"],
-    "dept_key": "technology",
+    "dept_key": "",
     "first_name": "",
     "last_name": "",
     "is_staff": true,

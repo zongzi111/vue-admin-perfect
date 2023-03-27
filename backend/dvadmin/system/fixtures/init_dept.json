@@ -11,7 +11,7 @@
         "children": [
             {
                 "name": "实验组",
-                "key": "",
+                "key": "experiment",
                 "sort": 2,
                 "owner": "",
                 "phone": "",
@@ -22,7 +22,7 @@
             },
             {
                 "name": "生信组",
-                "key": "",
+                "key": "bioinformatics",
                 "sort": 1,
                 "owner": "",
                 "phone": "",
