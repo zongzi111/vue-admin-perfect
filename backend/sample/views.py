@@ -1,6 +1,4 @@
-from sample.models import ProjectModel, SampleAnalysisModel
-from sample.serializers import ProjectModelSerializer, ProjectModelCreateUpdateSerializer
-from sample.serializers import SampleAnalysisModelSerializer, SampleAnalysisModelCreateUpdateSerializer
+from sample.models import *
 from sample.serializers import *
 from dvadmin.utils.viewset import CustomModelViewSet
 
@@ -41,7 +39,7 @@ class SampleAnalysisModelViewSet(CustomModelViewSet):
 
 class ProductModelViewSet(CustomModelViewSet):
     """
-    货号管理
+    Panel货号管理
     list:查询
     create:新增
     update:修改
@@ -52,5 +50,5 @@ class ProductModelViewSet(CustomModelViewSet):
     serializer_class = ProductModelSerializer
     create_serializer_class = ProductModelCreateUpdateSerializer
     update_serializer_class = ProductModelCreateUpdateSerializer
-    filter_fields = ['name']
-    search_fields = ['name']
+    filter_fields = ['product']
+    search_fields = ['product']

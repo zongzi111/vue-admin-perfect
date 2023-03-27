@@ -46,7 +46,7 @@ class SampleAnalysisModelCreateUpdateSerializer(CustomModelSerializer):
 
 class ProductModelSerializer(CustomModelSerializer):
     """
-    样本分析序列化器
+    Panel货号序列化器
     """
 
     class Meta:
@@ -56,7 +56,7 @@ class ProductModelSerializer(CustomModelSerializer):
 
 class ProductModelCreateUpdateSerializer(CustomModelSerializer):
     """
-    样本分析创建/更新时的列化器
+    Panel货号创建/更新时的列化器
     """
 
     class Meta:
