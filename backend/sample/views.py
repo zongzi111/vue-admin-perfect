@@ -1,6 +1,7 @@
 from sample.models import ProjectModel, SampleAnalysisModel
 from sample.serializers import ProjectModelSerializer, ProjectModelCreateUpdateSerializer
 from sample.serializers import SampleAnalysisModelSerializer, SampleAnalysisModelCreateUpdateSerializer
+from sample.serializers import *
 from dvadmin.utils.viewset import CustomModelViewSet
 
 
@@ -34,5 +35,22 @@ class SampleAnalysisModelViewSet(CustomModelViewSet):
     serializer_class = SampleAnalysisModelSerializer
     create_serializer_class = SampleAnalysisModelCreateUpdateSerializer
     update_serializer_class = SampleAnalysisModelCreateUpdateSerializer
+    filter_fields = ['name']
+    search_fields = ['name']
+
+
+class ProductModelViewSet(CustomModelViewSet):
+    """
+    货号管理
+    list:查询
+    create:新增
+    update:修改
+    retrieve:单例
+    destroy:删除
+    """
+    queryset = ProductModel.objects.all()
+    serializer_class = ProductModelSerializer
+    create_serializer_class = ProductModelCreateUpdateSerializer
+    update_serializer_class = ProductModelCreateUpdateSerializer
     filter_fields = ['name']
     search_fields = ['name']

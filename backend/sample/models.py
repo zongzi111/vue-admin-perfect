@@ -37,21 +37,21 @@ class SampleAnalysisModel(CoreModel):
         ordering = ('-id',)
 
 
-class BatchModel(CoreModel):
-    '''
-    分析批次表
-    '''
-    batch = models.CharField(max_length=255, verbose_name='分析批号')
-    sampleanalysis = models.ForeignKey(SampleAnalysisModel, on_delete=models.PROTECT, verbose_name='样本分析表')
+# class BatchModel(CoreModel):
+#     '''
+#     分析批次表
+#     '''
+#     batch = models.CharField(max_length=255, verbose_name='分析批号')
+#     sampleanalysis = models.ForeignKey(SampleAnalysisModel, on_delete=models.PROTECT, verbose_name='样本分析表')
 
-    def __str__(self):
-        return self.batch
+#     def __str__(self):
+#         return self.batch
 
-    class Meta:
-        db_table = "batches"
-        verbose_name = '分析批次表'
-        verbose_name_plural = verbose_name
-        ordering = ('-id',)
+#     class Meta:
+#         db_table = "batches"
+#         verbose_name = '分析批次表'
+#         verbose_name_plural = verbose_name
+#         ordering = ('-id',)
 
 
 class ProductModel(CoreModel):
@@ -93,7 +93,7 @@ class SampleModel(CoreModel):
     no = models.CharField(max_length=255, verbose_name='样本编号', unique=True)
     project = models.ForeignKey(ProjectModel, on_delete=models.PROTECT ,verbose_name='项目号')
     paired_sample = models.ForeignKey("SampleModel", on_delete=models.SET_NULL, null=True, blank=True, verbose_name="配对样本")
-    batch = models.ForeignKey(BatchModel, on_delete=models.PROTECT ,verbose_name='分析批次')
+    # batch = models.ForeignKey(BatchModel, on_delete=models.PROTECT ,verbose_name='分析批次')
     product = models.ForeignKey(ProductModel, on_delete=models.PROTECT ,verbose_name='Panel货号')
     SAMPLE_TYPE = (
         (0, "TIS"),

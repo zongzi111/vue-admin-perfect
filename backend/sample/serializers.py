@@ -1,5 +1,6 @@
 from sample.models import ProjectModel
 from sample.models import SampleAnalysisModel
+from sample.models import ProductModel
 from dvadmin.utils.serializers import CustomModelSerializer
 
 
@@ -40,4 +41,24 @@ class SampleAnalysisModelCreateUpdateSerializer(CustomModelSerializer):
 
     class Meta:
         model = SampleAnalysisModel
+        fields = '__all__'
+
+
+class ProductModelSerializer(CustomModelSerializer):
+    """
+    样本分析序列化器
+    """
+
+    class Meta:
+        model = ProductModel
+        fields = "__all__"
+
+
+class ProductModelCreateUpdateSerializer(CustomModelSerializer):
+    """
+    样本分析创建/更新时的列化器
+    """
+
+    class Meta:
+        model = ProductModel
         fields = '__all__'
