@@ -1,7 +1,7 @@
 [
     {
-        "name": "DVAdmin团队",
-        "key": "dvadmin",
+        "name": "NGS团队",
+        "key": "NGS",
         "sort": 1,
         "owner": "",
         "phone": "",
@@ -10,7 +10,7 @@
         "parent": null,
         "children": [
             {
-                "name": "运营部",
+                "name": "实验组",
                 "key": "",
                 "sort": 2,
                 "owner": "",
@@ -21,8 +21,8 @@
                 "children": []
             },
             {
-                "name": "技术部",
-                "key": "technology",
+                "name": "生信组",
+                "key": "",
                 "sort": 1,
                 "owner": "",
                 "phone": "",
