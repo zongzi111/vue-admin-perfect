@@ -1,6 +1,6 @@
 from sample.models import ProjectModel
 from sample.models import SampleAnalysisModel
-from sample.models import ProductModel
+from sample.models import *
 from dvadmin.utils.serializers import CustomModelSerializer
 
 
@@ -61,4 +61,24 @@ class ProductModelCreateUpdateSerializer(CustomModelSerializer):
 
     class Meta:
         model = ProductModel
+        fields = '__all__'
+
+
+class SpeciesModelSerializer(CustomModelSerializer):
+    """
+    物种表序列化器
+    """
+
+    class Meta:
+        model = SpeciesModel
+        fields = "__all__"
+
+
+class SpeciesModelCreateUpdateSerializer(CustomModelSerializer):
+    """
+    物种表创建/更新时的列化器
+    """
+
+    class Meta:
+        model = SpeciesModel
         fields = '__all__'
